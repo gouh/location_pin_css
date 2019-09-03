@@ -1,0 +1,50 @@
+/* Estilos del contenedor principal */
+#main-container{
+	width: 200px;
+	height: 310px;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	position: absolute;
+	margin: auto auto;
+}
+/* Estilos del titulo */
+#title{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* -- ESTILOS PRINCIPALES O IMPORTANTES -- */
+#location-pin {
+	/* Crea un cuadrado y le asigna un color de fondo */
+	width: 200px;
+	height: 200px;
+	background-color: red;
+
+	/* Redondea las dos esquinas superiores y la esquina inferior izquierda */
+	border-radius: 50% 50% 0 50%;
+
+	/* Rota la forma */
+	transform: rotateZ(45deg);
+	position: absolute;
+}
+
+/* Crea el punto del pin */
+#location-pin::before {
+	content: '';
+	display: inline-block;
+
+	/* Tamaño del cuadrado */
+	width: 80px;
+	height: 80px;
+
+	/* Da color y redondea el cuadro hasta que se convierte en un circulo */
+	background-color: darkred;
+	border-radius: 50%;
+
+	/* Centra el punto */
+	position: absolute;
+	top: calc(50% - 40px);
+	left: calc(50% - 40px);
+}
